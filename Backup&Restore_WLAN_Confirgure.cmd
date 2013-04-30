@@ -8,8 +8,8 @@ set /a a+=2
 set /a b+=2
 mode con:cols=%a% lines=%b%
 if %a% lss 46 goto re
-if "%~1" equ "/backup" goto backup
-if "%~1" equ "/restore" goto restore
+if /i "%~1" equ "/backup" goto backup
+if /i "%~1" equ "/restore" goto restore
 :start
 cls
 echo,
